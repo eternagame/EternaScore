@@ -8,7 +8,7 @@ The input file **PTC_round_1_SHAPE.rdat** was prepared using the [RDATKit](https
 
 2. In MATLAB, set `EternaScore/examples/ribosome_PTC/` as your working directory.
 
-3. Run the command `rdat_out = put_SHAPEscore_into_RDAT( 'PTC_round_1_SHAPE.rdat', 0, 0, 'PTC_round_1_SHAPE_Eterna_score_test.rdat' );`. This will load in the standard RDAT file **PTC_round_1_SHAPE.rdat**, calculate the Eterna SHAPE score for each entry, store the new RDAT with scores and asociated parameters added as data annotations in the workspace variable `rdat_eterna_scores`, and write the result to a new file named **PTC_round_1_SHAPE_Eterna_score_test.rdat**.	
+3. Run the command `rdat_eterna_scores = put_SHAPEscore_into_RDAT( 'PTC_round_1_SHAPE.rdat', 0, 0, 'PTC_round_1_SHAPE_Eterna_score_test.rdat' );`. This will load in the standard RDAT file **PTC_round_1_SHAPE.rdat**, calculate the Eterna SHAPE score for each entry, store the new RDAT with scores and asociated parameters added as data annotations in the workspace variable `rdat_eterna_scores`, and write the result to a new file named **PTC_round_1_SHAPE_Eterna_score_test.rdat**.	
 	- The middle input arguments set the 5' and 3' insets, which define the portion of the sequence that will be used in the score calculation. Their default values are 5 and 28, respectively.
 	- In this example, the extraneous 5' and 3' sequences, which include reference hairpins for reactivity normalization and the RT primer annealing site, have already been trimmed off as part of the HiTRACE analysis. We want to keep reactivity for the entire remaining sequence, which corresponds to each individual design from the puzzle.
 
